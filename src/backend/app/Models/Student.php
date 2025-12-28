@@ -16,6 +16,9 @@ class Student extends Model
         'email',
         'password_hash',
         'phone',
+        'department',
+        'year',
+        'gpa',
     ];
 
     protected $hidden = [
