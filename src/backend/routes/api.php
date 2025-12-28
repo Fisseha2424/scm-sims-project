@@ -11,6 +11,7 @@ Route::get('/test', function () {
 });
 
 Route::post('/login', [AuthController::class, 'login']);
+Route::post('/students/register', [StudentController::class, 'store']);
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/dashboard-modules', [DashboardController::class, 'getModules']);
