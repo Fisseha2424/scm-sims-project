@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard'
 import Profile from './pages/Profile'
 import Courses from './pages/Courses'
 import Grades from './pages/Grades'
+import StudentRegistration from './components/StudentRegistration'
 
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem('token');
@@ -17,6 +18,7 @@ function App() {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<StudentRegistration />} />
       <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
       <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
       <Route path="/courses" element={<ProtectedRoute><Courses /></ProtectedRoute>} />
